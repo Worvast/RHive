@@ -1,0 +1,167 @@
+2013-07-29
+    * rhive-2.0-0.0 release
+      * Thrift client -> jdbc client
+      + HiveServer2 support
+      + rhive.set operation
+      + rhive.unset operation
+      + rhive.list.udfs operation
+      + rhive.rm.udf operation
+      + error handler
+      * bug fixes
+      * code refactoring
+
+2013-03-12
+
+    * rhive-0.0-7.1 release
+    * added functions
+      - rhive.list.databases
+      - rhive.show.databases
+      - rhive.use.databases
+      - rhive.show.tables
+      
+
+2013-1-6
+
+    * no RServe option added(experimental)
+
+2012-11-20
+
+    * rhive-0.0-7 release
+      - Make RHive work with CDH4
+      - connection fail to rserver will be ignored
+      - try read hadoop config files from $HADOOP_CONF_DIR then $HADOOP_HOME/conf
+
+2012-6-8
+
+    * rhive-0.0-6 release
+    
+      - improve to load data from Hive to R
+      - support float type 
+      - bug fix 
+
+2012-5-21
+
+    * provdie default value of RHIVE_DATA as '/tmp'
+
+2012-5-15
+
+    * support float type in 'rhive.basic.cut' function  
+
+2012-04-13
+
+    * fix bug that try to change mode template script not generated script during generating map/reduce script
+    * add validation check whether file/directory exists in ls() function
+
+2012-03-27
+
+    * update man-file
+    * add addition info message for rhive.exportAll without slaves file
+
+2012-03-23
+
+    * add rhive.load.table2 function to improve data loading performance into R
+
+2012-02-28
+
+    * rhive-0.0-5 release
+    
+     - support basic statistic functions (mode, range, xtabs, cut, by, merge, scale, sample, t.test)
+     - support big result data what R can't handle
+
+2012-02-27
+
+    * fix bug that generate wrong query for rhive.basic.merge
+
+2012-02-22
+
+    * develop rhive.block.sample to use hive's block sampling
+
+2012-02-20
+
+    * add rhive.basic.t.test function
+    * add rhive.basic.cut2 function
+
+2012-02-07
+
+	* fix bug that generates same directory name in rhive.write.table
+
+2012-02-06
+
+    * add right option and new feature of rhive.basic.cut function
+
+2012-01-12
+
+    * handle big result of hive query
+
+2012-01-05
+
+	* develop basic statistic functions (scale)
+
+2011-12-29
+
+	* develop basic statistic functions (Mode, range, xtabs, cut, by, merge) 
+
+2011-12-17
+
+    * rhive-0.0-4 release
+    
+      - support napply, sapply and aggregate functions
+      - support hdfs functions
+      - support custom map/reduce script of hive
+      - add rhive tutorial and user guide 
+
+2011-12-08
+
+    * support custom map/reduce script of hive
+    * change default hdfs's port (5003 -> 8020)
+
+2011-12-02
+
+	* fix bug to handle NULL data
+	* initialize Rserve list from hadoop's slave file automatically
+
+2011-11-30
+
+    * develop rhive.load/rhive.save functions
+    * develop rhive.exist.table function
+
+2011-11-29
+
+	* develop hdfs functions (ls, put, get, rm, mkdir , rename and exists)
+    
+2011-11-01
+
+    * develop napply, sapply and aggregate functions
+
+2011-10-30
+
+    * rhive-0.0-3 release
+      
+      - execute hive query in R
+      - export R Ojbects to use in Hive Query as UDF
+      - create unitTests
+      - R package
+      - documentation
+
+2011-10-30
+
+    * re-factoring rhive code
+
+2011-10-28
+
+    * create unit-tests 
+
+2011-10-27  
+
+    * create git repository for rhive
+
+2011-10-25
+
+	* DESCRIPTION, NAMESPACE, R/rhive.R, R/rhiveInit.R, R/test.R,
+	  inst/doc/RHive.dvi, inst/doc/RHive.pdf, inst/java/rhive_udf.jar,
+	  inst/unitTests/runit-hiveConnect.R,inst/unitTests/runit-hiveExport.R,
+	  inst/unitTests/runit-hiveExportAll.R,inst/unitTests/runit-hiveQuery.R,
+	  man/rhive-connect.Rd,man/rhive-export.Rd,man/rhive-query.Rd,man/rhive.Rd,
+	  src/build.xml, src/build.num, src/Makevars, src/lib/REngine.jar, src/lib/RserveEngine.jar
+	  src/lib/hadoop-core-0.20.3-CDH3-SNAPSHOT.jar : initial import for preparation for public CRAN
+	  package, will take on most of Hive Query functionality
