@@ -53,7 +53,7 @@ NexR RHive 2.0
     2. Change your working directory: <code>cd RHive</code> 
     3. Change active branch to 'ranger':  
         1. <code>git fetch</code>  
-        2. <code>ggit branch -v -a</code>   
+        2. <code>git branch -v -a</code>   
         3. <code>git checkout -b ranger remotes/origin/ranger</code>   
     4. Set the environment variables:  
         1. <code>export HIVE_HOME=/path/to/your/hive/directory</code>  
