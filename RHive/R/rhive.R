@@ -158,7 +158,6 @@
 
     hiveClient <- .j2r.HiveJdbcClient(hiveServer2)
     hiveClient$connect(host, as.integer(port), db, user,password, j.properties)
-    hiveClient$addJar(.FS_JAR_PATH())
 
    .registerUDFs(hiveClient)
    .setConfigurations(hiveClient)
@@ -352,7 +351,7 @@
     for (i in seq.int(length(colTypes))) {
       colType <- colTypes[i]
       colName <- colNames[i]
-      if (colType == "string") {
+      if (any(colType %in% c("string","varchar","timestamp","date","char")))  {
         lst[[i]] <- character()
       } else if (length(grep("^array", colType)) > 0) {
         lst[[i]] <- character()
