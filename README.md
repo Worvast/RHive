@@ -49,13 +49,18 @@ NexR RHive 2.0
 1. Requirements
     - ant (in order to build java files)
 2. Installing RHive
-    1. Download source code: <code>git clone https://github.com/nexr/RHive.git</code>
+    1. Download source code: <code>git clone https://github.com/Worvast/RHive.git</code>
     2. Change your working directory: <code>cd RHive</code> 
-    3. Change active branch to 'ranger': <code>git fetch</code> <code>git checkout ranger</code> 
-    4. Set the environment variables HIVE_HOME and HADOOP_HOME:
-        <code>export HIVE_HOME=/path/to/your/hive/directory</code>
-        <code>export HADOOP_HOME=/path/to/your/hadoop/directory</code>
-    5. Build java files using ant: <code>ant build</code>
+    3. Change active branch to 'ranger':  
+        1. <code>git fetch</code>  
+        2. <code>git branch -v -a</code>   
+        3. <code>git checkout -b ranger remotes/origin/ranger</code>   
+    4. Set the environment variables:  
+        1. <code>export HIVE_HOME=/path/to/your/hive/directory</code>  
+        2. <code>export HADOOP_HOME=/path/to/your/hadoop/directory</code>  
+        3. <code>export HADOOP_HDFS_HOME=/path/to/your/hadoop/directory</code> 
+        4. <code>export HADOOP_MAPREDUCE_HOME=/path/to/your/hadoop/directory</code> 
+    5. Build java files using ant: <code>ant build</code>  
     6. Build RHive: <code>R CMD build RHive</code>
     7. Install RHive: <code>R CMD INSTALL RHive_<VERSION>.tar.gz</code>
 
